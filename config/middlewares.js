@@ -11,9 +11,9 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:5173', 'https://www.saintsafaris.com'],
+      origin: ['http://localhost:4173', 'http://localhost:5173', 'https://www.saintsafaris.com'], // Include all possible frontend URLs
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
       credentials: true,
     },
   },
-]
+];
