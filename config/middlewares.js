@@ -14,7 +14,7 @@ module.exports = [
       origin: [
         'http://localhost:4173', // Local frontend URL
         'http://localhost:5173', // Local frontend URL (Vite default)
-        'https://www.saintsafaris.com', // Production frontend URL
+        'https://saintsafaris.com', // Production frontend URL
         'https://saintapi.koyeb.app', // Backend URL (if needed)
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Include OPTIONS for preflight requests
