@@ -16,6 +16,7 @@ module.exports = [
         'https://saintsafaris.com', // Production frontend URL
         'https://www.saintsafaris.com', // Production frontend URL
         'https://saintapi.koyeb.app', // Backend URL (if needed)
+        'http://localhost:1337/'
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Include OPTIONS for preflight requests
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'], // Allowed headers
