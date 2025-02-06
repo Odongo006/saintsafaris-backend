@@ -2,7 +2,6 @@ module.exports = [
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
-  'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
   'strapi::session',
@@ -12,15 +11,15 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       origin: [
-        'https://saintapi.koyeb.app', // Backend URL (if needed)
-        'http://localhost:5173', // Local frontend URL
-        'https://www.saintsafaris.com', // Production frontend URL
-        'https://saintsafaris.com', // Production frontend URL
-        'http://localhost:1337/',
+        'https://saintapi.koyeb.app', // Backend URL
+        'http://localhost:5173', // Local frontend
+        'https://www.saintsafaris.com', // Production frontend
+        'https://saintsafaris.com', // Production frontend
+        'http://localhost:1337',
       ],
-      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Include OPTIONS for preflight requests
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'], // Allowed headers
-      credentials: true, // Allow credentials (e.g., cookies, authorization headers)
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      credentials: true, // Allow credentials (cookies, authorization headers)
     },
   },
 ];

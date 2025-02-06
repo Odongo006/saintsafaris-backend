@@ -1,15 +1,29 @@
 module.exports = ({ env }) => ({
-  host: env('HOST', '0.0.0.0','102.210.146.106','https://saintapi.koyeb.app'),
+  host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
+  url: env('PUBLIC_URL', 'https://saintapi.koyeb.app'), // Ensure correct HTTPS URL
+
   app: {
     keys: env.array('APP_KEYS'),
   },
+
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
+
   logger: {
-    level: 'debug', // Log level
-    exposeInContext: true, // Makes the logger available in the context
-    requests: true, // Logs HTTP requests
+    level: 'debug',
+    exposeInContext: true,
+    requests: true,
+  },
+
+  settings: {
+    session: {
+      enabled: true,
+      cookie: {
+        secure: env.bool('COOKIE_SECURE', env('NODE_ENV') === 'production'), // Secure cookies only in production
+        httpOnly: true,
+      },
+    },
   },
 });
