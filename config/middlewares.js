@@ -13,7 +13,7 @@ module.exports = [
     config: {
       origin: [
         'https://saintapi.koyeb.app', // Backend URL (if needed)
-        'http://localhost:4173', // Local frontend URL
+        'http://localhost:5173', // Local frontend URL
         'https://www.saintsafaris.com', // Production frontend URL
         'https://saintsafaris.com', // Production frontend URL
         'http://localhost:1337/',
