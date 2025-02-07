@@ -11,15 +11,13 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       origin: [
-        'https://saintapi.koyeb.app', // Backend URL
-        'http://localhost:5173', // Local frontend
-        'https://www.saintsafaris.com', // Production frontend
-        'https://saintsafaris.com', // Production frontend
-        'http://localhost:1337',
+        'https://saintsafaris.com',  // Primary frontend
+        'https://www.saintsafaris.com',  // Alternative frontend
+        'http://localhost:5173',  // Local frontend for development
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
-      credentials: true, // Allow credentials (cookies, authorization headers)
+      credentials: true, // Allow cookies and authorization headers
     },
   },
 ];
