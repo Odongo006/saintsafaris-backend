@@ -1,7 +1,9 @@
 module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
-  url: env('PUBLIC_URL', 'https://saintapi.koyeb.app'), // Ensure correct HTTPS URL
+  url: env('PUBLIC_URL', 'https://saintapi.koyeb.app'), // Ensure HTTPS backend URL
+
+  proxy: true, // ✅ Trust Koyeb's proxy to properly handle HTTPS requests
 
   app: {
     keys: env.array('APP_KEYS'),
@@ -21,8 +23,9 @@ module.exports = ({ env }) => ({
     session: {
       enabled: true,
       cookie: {
-        secure: env.bool('COOKIE_SECURE', env('NODE_ENV') === 'production'), // Secure cookies only in production
+        secure: env.bool('COOKIE_SECURE', true), // ✅ Force secure cookies
         httpOnly: true,
+        sameSite: 'strict', // ✅ Prevent cross-site attacks
       },
     },
   },
